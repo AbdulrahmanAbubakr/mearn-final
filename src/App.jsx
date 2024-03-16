@@ -1,6 +1,6 @@
-import Details from "./Components/Details"
-import Nav from "./Components/Nav"
-import SideNav from "./Components/SideNav"
+import { Route, Routes } from "react-router-dom"
+import LoginForm from "./Components/Login/Login"
+import Profile from "./Components/Profile/Profile"
 
 
 
@@ -8,9 +8,12 @@ function App() {
 
   return (
     <>
-  <Nav></Nav>
-  <SideNav></SideNav>
-  <Details></Details>
+    <Routes>
+      <Route path="/login" element={<LoginForm/>} />
+    <Route path="user-profile" element={<Profile/>} />
+    
+    </Routes>
+
     </>
   )
 }
